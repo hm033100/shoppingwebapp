@@ -12,9 +12,6 @@ public class Product {
 	private String _id;
 	
 	@NonNull
-	private String shoppingCartId;
-	
-	@NonNull
 	private String productName;
 	
 	@NonNull
@@ -29,14 +26,6 @@ public class Product {
 
 	public void set_id(String _id) {
 		this._id = _id;
-	}
-
-	public String getShoppingCartId() {
-		return shoppingCartId;
-	}
-
-	public void setShoppingCartId(String shoppingCartId) {
-		this.shoppingCartId = shoppingCartId;
 	}
 
 	public String getProductName() {
@@ -67,7 +56,6 @@ public class Product {
 			String productPrice) {
 		super();
 		this._id = _id;
-		this.shoppingCartId = shoppingCartId;
 		this.productName = productName;
 		this.productDescription = productDescription;
 		this.productPrice = productPrice;

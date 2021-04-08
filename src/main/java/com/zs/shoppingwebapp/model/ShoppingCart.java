@@ -1,5 +1,7 @@
 package com.zs.shoppingwebapp.model;
 
+import java.util.ArrayList;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,6 +18,9 @@ public class ShoppingCart {
 	
 	@NonNull
 	private String totalItems;
+	
+	@NonNull
+	private ArrayList<Product> products;
 
 	public String get_id() {
 		return _id;
@@ -41,11 +46,20 @@ public class ShoppingCart {
 		this.totalItems = totalItems;
 	}
 
-	public ShoppingCart(String _id, String totalPrice, String totalItems) {
+	public ArrayList<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(ArrayList<Product> products) {
+		this.products = products;
+	}
+
+	public ShoppingCart(String _id, String totalPrice, String totalItems, ArrayList<Product> products) {
 		super();
 		this._id = _id;
 		this.totalPrice = totalPrice;
 		this.totalItems = totalItems;
+		this.products = products;
 	}
 
 	public ShoppingCart() {
